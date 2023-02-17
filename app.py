@@ -3,6 +3,9 @@ import joblib
 import pandas as pd
 import gradio as gr
 
+test_env = os.getenv("TEST12321")
+print(test_env)
+
 model = joblib.load("iris_classifier.joblib")
 
 def model_inference(sepal_length: float, sepal_width: float, petal_length: float, petal_width: float) -> int:
